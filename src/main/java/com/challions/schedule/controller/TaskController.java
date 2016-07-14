@@ -1,7 +1,7 @@
 package com.challions.schedule.controller;
 
-import com.challions.schedule.model.TaskEntity;
 import com.challions.schedule.service.ScheduleService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.stereotype.Controller;
@@ -29,9 +29,9 @@ public class TaskController {
     @RequestMapping
     public String list() {
         ScheduledExecutorService scheduler = taskScheduler.getScheduledExecutor();
-        ScheduledThreadPoolExecutor executor =  taskScheduler..getScheduledThreadPoolExecutor();
+        ScheduledThreadPoolExecutor executor =  taskScheduler.getScheduledThreadPoolExecutor();
         BlockingQueue<Runnable> queue = executor.getQueue();
-        scheduleService.;
+//        scheduleService.;
 
         return "tasks";
     }
